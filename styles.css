@@ -9,9 +9,25 @@ body {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
   background-color: #fff;
-  color:#4d4e53;
-  /* display:flex; */
-  justify-content:center;
+  color: #4d4e53;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f8f8f8;
+  border-right: 2px solid grey;
+  padding-top: 20px;
+}
+
+main {
+  margin-left: 300px;
+  padding: 20px;
+  width: auto;
 }
 
 #logo {
@@ -19,10 +35,7 @@ body {
   margin: 15px 6px 10px 20px;
   font-weight: bold;
 }
-nav{
-  border-right:2px solid grey;
-  margin-left: 0;
-}
+
 a {
   color: #4d4e53;
   text-decoration: none;
@@ -52,13 +65,12 @@ nav li {
 
 header {
   font-size: 2.5rem;
-  margin: 25px;
+  margin: 25px 0;
 }
-
 
 .content {
   font-size: 20px;
-  margin: 15px;
+  margin: 15px 0;
 }
 
 section ul {
@@ -68,15 +80,36 @@ section ul {
 section li {
   list-style: disc;
   padding: 10px 0;
-  font-size:20px;
+  font-size: 20px;
 }
 
-main {
-  max-width: 900px;
-  padding: 20px;
-}
-pre{
-  padding-left:50px;
-  font-size:15px;
+pre {
+  padding-left: 50px;
+  font-size: 15px;
+  background-color: #eee;
 }
 
+.main-section {
+  width: 100%;
+}
+.bubble{
+  list-style:circle;
+  margin-left:40px; 
+}
+section a{
+  color:purple;
+}
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid grey;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
